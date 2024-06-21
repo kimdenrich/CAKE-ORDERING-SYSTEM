@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="802.0" prefWidth="1485.0" style="-fx-background-color: ff6201;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.final_ordering_system_project.DashboardController">
+   <children>
+      <VBox layoutX="1.0" prefHeight="802.0" prefWidth="143.0" style="-fx-background-color: e8600c;">
+         <children>
+            <ImageView fitHeight="144.0" fitWidth="145.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/cake_logo.png" />
+               </image>
+            </ImageView>
+            <AnchorPane prefHeight="158.0" prefWidth="124.0" />
+            <Button fx:id="traditionalCakeBtn" mnemonicParsing="false" onAction="#onTraditionalCakeClick" prefHeight="70.0" prefWidth="144.0" style="-fx-background-color: e8600c;" text="TRADITIONAL&#10;     CAKE" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="14.0" />
+               </font></Button>
+            <Separator opacity="0.0" prefHeight="14.0" prefWidth="144.0" style="-fx-background-color: e8600c;" />
+            <Button fx:id="fruitCakeBtn" mnemonicParsing="false" onAction="#onFruitCakeClick" prefHeight="68.0" prefWidth="143.0" style="-fx-background-color: e8600c;" text="FRUIT CAKE" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="14.0" />
+               </font></Button>
+            <Separator layoutX="10.0" layoutY="318.0" opacity="0.0" prefHeight="14.0" prefWidth="144.0" style="-fx-background-color: e8600c;" />
+            <Button fx:id="chiffonCakeBtn" layoutX="10.0" layoutY="348.0" mnemonicParsing="false" onAction="#onChiffonCakeClick" prefHeight="62.0" prefWidth="143.0" style="-fx-background-color: e8600c;" text="CHIFFON CAKES" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="14.0" />
+               </font></Button>
+            <Separator opacity="0.0" prefHeight="14.0" prefWidth="144.0" />
+            <Button fx:id="logout" mnemonicParsing="false" onAction="#onLogoutClick" prefHeight="50.0" prefWidth="146.0" style="-fx-background-color: e8600c;" text="LOGOUT" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic Bold" size="14.0" />
+               </font></Button>
+         </children>
+      </VBox>
+      <TabPane fx:id="MainTab" layoutX="185.0" layoutY="58.0" prefHeight="685.0" prefWidth="712.0" style="-fx-background-color: e57c04;" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="traditionalCakeTab" style="fx: faa300;" text="Traditional Cake">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: faa300;">
+                     <children>
+                        <Pane layoutX="46.0" layoutY="25.0" prefHeight="188.0" prefWidth="191.0" style="-fx-background-color: FFFFFF;">
+                           <children>
+                              <Label layoutX="16.0" layoutY="8.0" text="BIBINGKA">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="priceLabel1" layoutX="147.0" layoutY="9.0" text="25.00" />
+                              <Spinner fx:id="spinner1" layoutX="18.0" layoutY="149.0" prefHeight="16.0" prefWidth="60.0" />
+                              <Button fx:id="orderBtn1" layoutX="97.0" layoutY="151.0" mnemonicParsing="false" onAction="#onActionOrder1" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: ORANGE;" text="ORDER">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="99.0" fitWidth="164.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/bibingka.jpg" />
+                                 </image></ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="267.0" layoutY="26.0" prefHeight="188.0" prefWidth="191.0" style="-fx-background-color: FFFFFF;">
+                           <children>
+                              <Label layoutX="16.0" layoutY="8.0" text="BIKO">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="priceLabel2" layoutX="147.0" layoutY="9.0" text="25.00" />
+                              <Spinner fx:id="spinner2" layoutX="18.0" layoutY="149.0" prefHeight="16.0" prefWidth="60.0" />
+                              <Button fx:id="orderBtn2" layoutX="97.0" layoutY="151.0" mnemonicParsing="false" onAction="#onActionOrder2" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: ORANGE;" text="ORDER">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="99.0" fitWidth="164.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/biko.png" />
+                                 </image></ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="487.0" layoutY="27.0" prefHeight="188.0" prefWidth="191.0" style="-fx-background-color: FFFFFF;">
+                           <children>
+                              <Label layoutX="16.0" layoutY="8.0" text="PICHI-PICHI">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="priceLabel4" layoutX="147.0" layoutY="9.0" text="25.00" />
+                              <Spinner fx:id="spinner3" layoutX="18.0" layoutY="149.0" prefHeight="16.0" prefWidth="60.0" />
+                              <Button fx:id="orderBtn3" layoutX="97.0" layoutY="151.0" mnemonicParsing="false" onAction="#onActionOrder3" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: ORANGE;" text="ORDER">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="99.0" fitWidth="164.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/pichi-pichi.jpg" />
+                                 </image></ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="47.0" layoutY="243.0" prefHeight="188.0" prefWidth="191.0" style="-fx-background-color: FFFFFF;">
+                           <children>
+                              <Label layoutX="16.0" layoutY="8.0" text="TORTA DE CEBU">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="priceLabel5" layoutX="147.0" layoutY="9.0" text="25.00" />
+                              <Button fx:id="orderBtn4" layoutX="97.0" layoutY="151.0" mnemonicParsing="false" onAction="#onActionOrder4" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: ORANGE;" text="ORDER">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="99.0" fitWidth="164.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/torta de cebu.jpg" />
+                                 </image></ImageView>
+                              <Spinner fx:id="spinner4" layoutX="14.0" layoutY="150.0" prefHeight="16.0" prefWidth="60.0" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="268.0" layoutY="244.0" prefHeight="188.0" prefWidth="191.0" style="-fx-background-color: FFFFFF;">
+                           <children>
+                              <Label layoutX="16.0" layoutY="8.0" text="SAPIN-SAPIN">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="priceLabel21" layoutX="147.0" layoutY="9.0" text="25.00" />
+                              <Spinner fx:id="spinner20" layoutX="18.0" layoutY="149.0" prefHeight="16.0" prefWidth="60.0" />
+                              <Button fx:id="orderBtn20" layoutX="97.0" layoutY="151.0" mnemonicParsing="false" onAction="#onActionOrder20" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: ORANGE;" text="ORDER">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="99.0" fitWidth="164.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/sapin-sapin.jpg" />
+                                 </image></ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="488.0" layoutY="245.0" prefHeight="188.0" prefWidth="191.0" style="-fx-background-color: FFFFFF;">
+                           <children>
+                              <Label layoutX="16.0" layoutY="8.0" text="SUMAN">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="priceLabel6" layoutX="147.0" layoutY="9.0" text="25.00" />
+                              <Spinner fx:id="spinner5" layoutX="18.0" layoutY="149.0" prefHeight="16.0" prefWidth="60.0" />
+                              <Button fx:id="orderBtn5" layoutX="97.0" layoutY="151.0" mnemonicParsing="false" onAction="#onActionOrder5" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: ORANGE;" text="ORDER">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="99.0" fitWidth="164.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/suman.jpg" />
+                                 </image></ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="48.0" layoutY="453.0" prefHeight="188.0" prefWidth="191.0" style="-fx-background-color: FFFFFF;">
+                           <children>
+                              <Label layoutX="16.0" layoutY="8.0" text="PUTO CHEESE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="priceLabel7" layoutX="147.0" layoutY="9.0" text="25.00" />
+                              <Spinner fx:id="spinner6" layoutX="18.0" layoutY="149.0" prefHeight="16.0" prefWidth="60.0" />
+                              <Button fx:id="orderBtn6" layoutX="97.0" layoutY="151.0" mnemonicParsing="false" onAction="#onActionOrder6" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: ORANGE;" text="ORDER">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="99.0" fitWidth="164.0" layoutX="31.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/puto_cheese.jpg" />
+                                 </image></ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="269.0" layoutY="454.0" prefHeight="188.0" prefWidth="191.0" style="-fx-background-color: FFFFFF;">
+                           <children>
+                              <Label layoutX="16.0" layoutY="8.0" text="KUTSINTA">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="priceLabel8" layoutX="147.0" layoutY="9.0" text="25.00" />
+                              <Spinner fx:id="spinner7" layoutX="18.0" layoutY="149.0" prefHeight="16.0" prefWidth="60.0" />
+                              <Button fx:id="orderBtn7" layoutX="97.0" layoutY="151.0" mnemonicParsing="false" onAction="#onActionOrder7" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: ORANGE;" text="ORDER">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="99.0" fitWidth="164.0" layoutX="22.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/kutsinta.jpg" />
+                                 </image></ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="489.0" layoutY="455.0" prefHeight="188.0" prefWidth="191.0" style="-fx-background-color: FFFFFF;">
+                           <children>
+                              <Label layoutX="16.0" layoutY="8.0" text="PALITAW">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="priceLabel9" layoutX="147.0" layoutY="9.0" text="25.00" />
+                              <Spinner fx:id="spinner8" layoutX="18.0" layoutY="149.0" prefHeight="16.0" prefWidth="60.0" />
+                              <Button fx:id="orderBtn8" layoutX="97.0" layoutY="151.0" mnemonicParsing="false" onAction="#onActionOrder8" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: ORANGE;" text="ORDER">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="15.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="99.0" fitWidth="164.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/palitaw-recipe.png" />
+                                 </image></ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </content></Tab>
+          <Tab fx:id="fruitCakeTab" text="Fruit Cake">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: faa300;">
+                     <children>
+                        <Pane layoutX="38.0" layoutY="62.0" prefHeight="188.0" prefWidth="191.0" style="-fx-background-color: FFFFFF;">
+                           <children>
+                              <Label layoutX="16.0" layoutY="8.0" text="PINEAPPLE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="priceLabel10" layoutX="147.0" layoutY="9.0" text="50.00" />
+                              <Spinner fx:id="spinner9" layoutX="18.0" layoutY="149.0" prefHeight="16.0" prefWidth="60.0" />
+                              <Button fx:id="orderBtn9" layoutX="97.0" layoutY="151.0" mnemonicParsing="false" onAction="#onActionOrder9" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: ORANGE;" text="ORDER">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="99.0" fitWidth="164.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/pineapple.webp" />
+                                 </image></ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="261.0" layoutY="62.0" prefHeight="188.0" prefWidth="191.0" style="-fx-background-color: FFFFFF;">
+                           <children>
+                              <Label layoutX="16.0" layoutY="8.0" text="MANGO FLOAT">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="priceLabel11" layoutX="147.0" layoutY="9.0" text="50.00" />
+                              <Spinner fx:id="spinner10" layoutX="18.0" layoutY="149.0" prefHeight="16.0" prefWidth="60.0" />
+                              <Button fx:id="orderBtn10" layoutX="97.0" layoutY="151.0" mnemonicParsing="false" onAction="#onActionOrder10" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: ORANGE;" text="ORDER">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="99.0" fitWidth="164.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/mango float.jpg" />
+                                 </image></ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="488.0" layoutY="62.0" prefHeight="188.0" prefWidth="191.0" style="-fx-background-color: FFFFFF;">
+                           <children>
+                              <Label layoutX="16.0" layoutY="8.0" text="UBE CAKE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="priceLabel12" layoutX="147.0" layoutY="9.0" text="50.00" />
+                              <Spinner fx:id="spinner11" layoutX="18.0" layoutY="149.0" prefHeight="16.0" prefWidth="60.0" />
+                              <Button fx:id="orderBtn11" layoutX="97.0" layoutY="151.0" mnemonicParsing="false" onAction="#onActionOrder11" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: ORANGE;" text="ORDER">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="99.0" fitWidth="164.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/ube cake.jpg" />
+                                 </image></ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="38.0" layoutY="289.0" prefHeight="188.0" prefWidth="191.0" style="-fx-background-color: FFFFFF;">
+                           <children>
+                              <Label layoutX="16.0" layoutY="8.0" text="YEMA CAKE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="priceLabel13" layoutX="147.0" layoutY="9.0" text="30.00" />
+                              <Spinner fx:id="spinner12" layoutX="18.0" layoutY="149.0" prefHeight="16.0" prefWidth="60.0" />
+                              <Button fx:id="orderBtn12" layoutX="97.0" layoutY="151.0" mnemonicParsing="false" onAction="#onActionOrder12" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: ORANGE;" text="ORDER">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="99.0" fitWidth="164.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/yema ckae.jpg" />
+                                 </image></ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="261.0" layoutY="289.0" prefHeight="188.0" prefWidth="191.0" style="-fx-background-color: FFFFFF;">
+                           <children>
+                              <Label layoutX="16.0" layoutY="8.0" text="BANANA CAKE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="priceLabel14" layoutX="147.0" layoutY="9.0" text="20.00" />
+                              <Spinner fx:id="spinner13" layoutX="18.0" layoutY="149.0" prefHeight="16.0" prefWidth="60.0" />
+                              <Button fx:id="orderBtn13" layoutX="97.0" layoutY="151.0" mnemonicParsing="false" onAction="#onActionOrder13" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: ORANGE;" text="ORDER">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="99.0" fitWidth="164.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/banana cake-2.jpg" />
+                                 </image></ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="488.0" layoutY="289.0" prefHeight="188.0" prefWidth="191.0" style="-fx-background-color: FFFFFF;">
+                           <children>
+                              <Label layoutX="16.0" layoutY="8.0" text="STRAWBERRY CAKE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="priceLabel15" layoutX="147.0" layoutY="9.0" text="30.00" />
+                              <Spinner fx:id="spinner14" layoutX="18.0" layoutY="149.0" prefHeight="16.0" prefWidth="60.0" />
+                              <Button fx:id="orderBtn14" layoutX="97.0" layoutY="151.0" mnemonicParsing="false" onAction="#onActionOrder14" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: ORANGE;" text="ORDER">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="99.0" fitWidth="164.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/strawberry.jpg" />
+                                 </image></ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </content></Tab>
+            <Tab fx:id="chiffonCakeTab" text="Chiffon Cake">
+               <content>
+                  <Pane prefHeight="188.0" prefWidth="191.0" style="-fx-background-color: faa300;">
+                     <children>
+                        <Pane layoutX="32.0" layoutY="62.0" prefHeight="188.0" prefWidth="191.0" style="-fx-background-color: FFFFFF;">
+                           <children>
+                              <Label layoutX="16.0" layoutY="8.0" text="BRAZO DE MERCEDES">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="147.0" layoutY="9.0" text="30.00" />
+                              <Spinner fx:id="spinner15" layoutX="18.0" layoutY="149.0" prefHeight="16.0" prefWidth="60.0" />
+                              <Button fx:id="orderBtn15" layoutX="97.0" layoutY="151.0" mnemonicParsing="false" onAction="#onActionOrder15" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: ORANGE;" text="ORDER">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="99.0" fitWidth="164.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/brazo de mercedes.jpg" />
+                                 </image></ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="135.0" layoutY="303.0" prefHeight="188.0" prefWidth="191.0" style="-fx-background-color: FFFFFF;">
+                           <children>
+                              <Label layoutX="1.0" layoutY="9.0" text="ORANGE CHIFFON CAKE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="priceLabel17" layoutX="147.0" layoutY="9.0" text="30.00" />
+                              <Spinner fx:id="spinner16" layoutX="18.0" layoutY="149.0" prefHeight="16.0" prefWidth="60.0" />
+                              <Button fx:id="orderBtn16" layoutX="97.0" layoutY="151.0" mnemonicParsing="false" onAction="#onActionOrder16" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: ORANGE;" text="ORDER">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="99.0" fitWidth="164.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/orange.jpg" />
+                                 </image></ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="402.0" layoutY="303.0" prefHeight="188.0" prefWidth="191.0" style="-fx-background-color: FFFFFF;">
+                           <children>
+                              <Label layoutX="16.0" layoutY="8.0" text="UBE CHIFFON CAKE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="priceLabel0" layoutX="147.0" layoutY="9.0" text="30.00" />
+                              <Spinner fx:id="spinner17" layoutX="18.0" layoutY="149.0" prefHeight="16.0" prefWidth="60.0" />
+                              <Button fx:id="orderBtn17" layoutX="97.0" layoutY="151.0" mnemonicParsing="false" onAction="#onActionOrder17" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: ORANGE;" text="ORDER">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="99.0" fitWidth="164.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/ube.jpg" />
+                                 </image></ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="489.0" layoutY="62.0" prefHeight="188.0" prefWidth="191.0" style="-fx-background-color: FFFFFF;">
+                           <children>
+                              <Label layoutX="16.0" layoutY="8.0" text="MOCHA CAKE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="priceLabel19" layoutX="147.0" layoutY="9.0" text="30.00" />
+                              <Spinner fx:id="spinner18" layoutX="18.0" layoutY="149.0" prefHeight="16.0" prefWidth="60.0" />
+                              <Button fx:id="orderBtn18" layoutX="97.0" layoutY="151.0" mnemonicParsing="false" onAction="#onActionOrder18" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: ORANGE;" text="ORDER">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="99.0" fitWidth="164.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/mocha.jpg" />
+                                 </image></ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="262.0" layoutY="62.0" prefHeight="188.0" prefWidth="191.0" style="-fx-background-color: FFFFFF;">
+                           <children>
+                              <Label layoutX="8.0" layoutY="9.0" text="LEMON CHIFFON CAKE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="priceLabel20" layoutX="147.0" layoutY="9.0" text="30.00" />
+                              <Spinner fx:id="spinner19" layoutX="18.0" layoutY="149.0" prefHeight="16.0" prefWidth="60.0" />
+                              <Button fx:id="orderBtn19" layoutX="97.0" layoutY="151.0" mnemonicParsing="false" onAction="#onActionOrder19" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: ORANGE;" text="ORDER">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="14.0" />
+                                 </font></Button>
+                              <ImageView fitHeight="99.0" fitWidth="164.0" layoutX="14.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/lemonChiffon.jpg" />
+                                 </image></ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <TableView fx:id="tableView" layoutX="923.0" layoutY="28.0" prefHeight="445.0" prefWidth="550.0">
+        <columns>
+            <TableColumn fx:id="productIDColumn" prefWidth="90.4000244140625" text="PRODUCT ID" />
+            <TableColumn fx:id="productNameColumn" prefWidth="256.0" text="PRODUCT NAME" />
+            <TableColumn fx:id="quantityColumn" minWidth="0.0" prefWidth="68.0" text="QUANTITY" />
+            <TableColumn fx:id="priceColumn" prefWidth="136.0" text="PRICE " />
+        </columns>
+      </TableView>
+      <Label layoutX="1268.0" layoutY="481.0" text="TOTAL: " textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="deleteOrderBtn" layoutX="1244.0" layoutY="674.0" mnemonicParsing="false" onAction="#onDeleteOrderClick" prefHeight="42.0" prefWidth="104.0" style="-fx-background-color: ORANGE;" text="DELETE ORDER">
+         <font>
+            <Font name="Century Gothic Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="total" layoutX="1376.0" layoutY="481.0" text="00.00" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="22.0" />
+         </font>
+      </Label>
+      <Button fx:id="checkOutBtn" layoutX="1368.0" layoutY="674.0" mnemonicParsing="false" onAction="#onCheckoutClick" prefHeight="42.0" prefWidth="104.0" style="-fx-background-color: ORANGE;" text="CHECK OUT">
+         <font>
+            <Font name="Century Gothic Bold" size="13.0" />
+         </font></Button>
+      <TextField fx:id="nameF" layoutX="923.0" layoutY="498.0" prefHeight="26.0" prefWidth="290.0" />
+      <TextField fx:id="contact" layoutX="923.0" layoutY="550.0" prefHeight="26.0" prefWidth="290.0" />
+      <TextArea fx:id="addressArea" layoutX="923.0" layoutY="601.0" prefHeight="123.0" prefWidth="290.0" />
+      <Label layoutX="927.0" layoutY="479.0" text="NAME" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="927.0" layoutY="531.0" text="CONTACT" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="927.0" layoutY="582.0" text="ADDRESS" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="15.0" />
+         </font>
+      </Label>
+      <Pane layoutX="180.0" layoutY="8.0" prefHeight="86.0" prefWidth="724.0" style="-fx-background-color: ff6201;" />
+      <ComboBox fx:id="selectOrderOptions" layoutX="1243.0" layoutY="553.0" prefHeight="26.0" prefWidth="226.0" promptText="SELECT ORDER TYPE" />
+      <DatePicker fx:id="datePicker" layoutX="1246.0" layoutY="596.0" prefHeight="26.0" prefWidth="97.0" />
+      <TextField fx:id="enterTime" layoutX="1365.0" layoutY="596.0" prefHeight="26.0" prefWidth="98.0" />
+      <Button fx:id="confirm" layoutX="1243.0" layoutY="638.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: orange;" text="CONFIRM" textFill="#100f0f">
+         <font>
+            <Font name="Century Gothic Bold" size="13.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="modeOfPayment" layoutX="1244.0" layoutY="517.0" prefHeight="26.0" prefWidth="226.0" promptText="MODE OF PAYMENT" />
+      <Button fx:id="paymentDetails" layoutX="1368.0" layoutY="638.0" mnemonicParsing="false" onAction="#onPaymentDetailsClick" prefHeight="26.0" prefWidth="104.0" style="-fx-background-color: orange;" text="PAYMENT DETAILS" textFill="#100f0f">
+         <font>
+            <Font name="Century Gothic Bold" size="10.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

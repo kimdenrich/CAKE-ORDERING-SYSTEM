@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="699.0" style="-fx-background-color: e8600c;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.final_ordering_system_project.LoginController">
+   <children>
+      <Button fx:id="loginButton" layoutX="360.0" layoutY="311.0" mnemonicParsing="false" onAction="#onLoginClick" prefHeight="28.0" prefWidth="104.0" style="-fx-background-color: FF893F;" text="LOGIN">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="userText" layoutX="221.0" layoutY="182.0" prefHeight="26.0" prefWidth="241.0" promptText="Enter Username" />
+      <PasswordField fx:id="passText" layoutX="220.0" layoutY="242.0" prefHeight="26.0" prefWidth="242.0" promptText="Enter Password" />
+      <Label layoutX="221.0" layoutY="159.0" text="USERNAME" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="220.0" layoutY="221.0" text="PASSWORD" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="wrongLogin" layoutX="220.0" layoutY="276.0" prefHeight="18.0" prefWidth="242.0" textFill="#ff8383" />
+      <ImageView fx:id="logoBake" fitHeight="157.0" fitWidth="185.0" layoutX="263.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/cake_logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="221.0" layoutY="360.0" text="Don't have an account?" textFill="WHITE">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="signUpButton" layoutX="365.0" layoutY="354.0" mnemonicParsing="false" onAction="#onSignUpClick" prefHeight="28.0" prefWidth="62.0" style="-fx-background-color: e8600c;" text="SIGN UP" textFill="#2b00ff">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="221.0" layoutY="311.0" mnemonicParsing="false" onAction="#onCancelClick" prefHeight="28.0" prefWidth="104.0" style="-fx-background-color: FF893F;" text="CANCEL">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="491.0" prefWidth="426.0" style="-fx-background-color: e8600c;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.final_ordering_system_project.OnlinePaymentController">
+    <children>
+        <TextField fx:id="cardName" layoutX="148.0" layoutY="112.0" prefHeight="26.0" prefWidth="240.0" />
+        <TextField fx:id="cardNumber" layoutX="148.0" layoutY="155.0" prefHeight="26.0" prefWidth="240.0" />
+        <TextField fx:id="expDate" layoutX="148.0" layoutY="195.0" prefHeight="26.0" prefWidth="240.0" />
+        <TextField fx:id="ccv" layoutX="148.0" layoutY="237.0" prefHeight="26.0" prefWidth="240.0" />
+        <RadioButton fx:id="rButtonCredit" layoutX="158.0" layoutY="276.0" mnemonicParsing="false" onAction="#onCreditClick" text="CREDIT " textFill="WHITE">
+            <font>
+                <Font name="Century Gothic Bold" size="13.0" />
+            </font>
+        </RadioButton>
+        <RadioButton fx:id="rButtonDebit" layoutX="246.0" layoutY="276.0" mnemonicParsing="false" onAction="#onDebitClick" text="DEBIT" textFill="WHITE">
+            <font>
+                <Font name="Century Gothic Bold" size="13.0" />
+            </font>
+        </RadioButton>
+        <TextField fx:id="billAdd" layoutX="148.0" layoutY="307.0" prefHeight="26.0" prefWidth="240.0" />
+        <TextField fx:id="phoneNumber" layoutX="148.0" layoutY="379.0" prefHeight="26.0" prefWidth="240.0" />
+        <TextField fx:id="email" layoutX="148.0" layoutY="342.0" prefHeight="26.0" prefWidth="240.0" />
+        <Button fx:id="submit" layoutX="148.0" layoutY="419.0" mnemonicParsing="false" onAction="#onSubmitClick" style="-fx-background-color: ORANGE;" text="SUBMIT">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Button>
+        <Label layoutX="67.0" layoutY="117.0" text="CARD NAME" textFill="WHITE">
+            <font>
+                <Font name="Century Gothic Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="51.0" layoutY="159.0" text="CARD NUMBER" textFill="WHITE">
+            <font>
+                <Font name="Century Gothic Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="34.0" layoutY="199.0" text="EXPIRATION DATE" textFill="WHITE">
+            <font>
+                <Font name="Century Gothic Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="102.0" layoutY="241.0" text="CCV" textFill="WHITE">
+            <font>
+                <Font name="Century Gothic Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="67.0" layoutY="275.0" text="CARD TYPE" textFill="WHITE">
+            <font>
+                <Font name="Century Gothic Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="37.0" layoutY="311.0" text="BILING ADDRESS" textFill="WHITE">
+            <font>
+                <Font name="Century Gothic Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="97.0" layoutY="346.0" text="EMAIL" textFill="WHITE">
+            <font>
+                <Font name="Century Gothic Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="43.0" layoutY="383.0" text="PHONE NUMBER" textFill="WHITE">
+            <font>
+                <Font name="Century Gothic Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="107.0" layoutY="34.0" text="ONLINE PAYMENT" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Century Gothic Bold" size="27.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
